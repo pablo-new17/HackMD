@@ -3,6 +3,11 @@ title: Yocto bitbake 工具集
 description: bitbake 工具的使用方法
 tags: bitbake bitbake-layers
 ---
+<style>
+.reveal {
+  font-size: 14px;
+}
+</style>
 
 Yocto 工具集
 ===
@@ -16,6 +21,8 @@ Yocto 工具集
 ## 目錄
 
 [TOC]
+
+----
 
 ## 安裝 yocto
 
@@ -33,6 +40,8 @@ $ pwd
 ``` bash
 /home/<yourname>/yocto/poky/build
 ```
+
+----
 
 ###### tags: `git` `yocto`
 
@@ -59,6 +68,8 @@ $ bitbake-layers command [arguments]
 | show-cross-depends      | Show dependencies between recipes that cross layer boundaries.                                           |
 | <font color="#f00">create-layer</font>             | Create a basic layer                                                                                     |
 
+----
+
 ### Example
 
 #### 1. show current enabled layers
@@ -74,6 +85,9 @@ meta                  /home/anser/yocto/poky/meta               5
 meta-poky             /home/anser/yocto/poky/meta-poky          5
 meta-yocto-bsp        /home/anser/yocto/poky/meta-yocto-bsp     5
 ```
+
+----
+
 
 #### 2. add a layer
 ![](https://i.imgur.com/oDZTJVY.png)
@@ -101,6 +115,9 @@ meta-yocto-bsp        /home/anser/yocto/poky/meta-yocto-bsp     5
 meta-qt5              /home/anser/yocto/poky/meta-qt5           7
 ```
 
+----
+
+
 #### 3. create a new layer
 
 建立一個空的全新 layer
@@ -121,6 +138,9 @@ meta-qt5              /home/anser/yocto/poky/meta-qt5           7
 meta-my_layer         /home/anser/yocto/poky/meta-my_layer      6
 ```
 
+----
+
+
 #### 4. delete a layer
 ``` bash=+
 $ bitbake-layers remove-layer ../meta-my_layer
@@ -138,6 +158,8 @@ meta-qt5              /home/anser/yocto/poky/meta-qt5           7
 
 ###### tags: bitbake-layers qt5
 
+----
+
 ## Creating the Base Recipe
 
 ### Using `devtool add`
@@ -147,6 +169,8 @@ meta-qt5              /home/anser/yocto/poky/meta-qt5           7
     asdf
 
 ###### tags: devtool recipetool
+
+----
 
 User flows
 ---
@@ -160,6 +184,8 @@ Alice->Bob: Where have you been?
 ```
 
 > Read more about sequence-diagrams here: http://bramp.github.io/js-sequence-diagrams/
+
+----
 
 Project Timeline
 ---
@@ -177,6 +203,8 @@ gantt
 ```
 
 > Read more about mermaid here: http://mermaid-js.github.io/mermaid/
+
+----
 
 ## Appendix and FAQ
 
